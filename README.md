@@ -85,7 +85,7 @@ Example: `192.168.43.222/27` → block 32 → network `.192`, broadcast `.223`, 
 
 ## Level 1 — Two hosts, one cable
 
-![Level 1](./level1.png)
+![Level 1](img/level1.png)
 
 **Concepts:** IP address, octets, binary, mask, network/broadcast address, AND.
 
@@ -102,7 +102,7 @@ Example: `192.168.43.222/27` → block 32 → network `.192`, broadcast `.223`, 
 
 ## Level 2 — Partial masks
 
-![Level 2](./level2.png)
+![Level 2](img/level2.png)
 
 **New concepts:** partial masks (`/25`–`/30`), block size, invalid masks, `/n` notation, reserved ranges.
 
@@ -118,7 +118,7 @@ Example: `192.168.43.222/27` → block 32 → network `.192`, broadcast `.223`, 
 
 ## Level 3 — The switch
 
-![Level 3](./level3.png)
+![Level 3](img/level3.png)
 
 **New concepts:** a switch has **no IP and no mask**; all hosts on one switch form **one network with one mask**; combine fixed values scattered across devices.
 
@@ -136,7 +136,7 @@ Fixed: A1 IP `104.198.30.125`, C1 mask `/25` → everyone uses `/25`, block `0�
 
 ## Level 4 — The first router
 
-![Level 4](./level4.png)
+![Level 4](img/level4.png)
 
 **New concepts:** a router has one network per interface; **a router's interface networks must never overlap**, even interfaces with no cable; forward vs reverse way.
 
@@ -154,7 +154,7 @@ Reserved by R2 (`0–127`) and R3 (`192–255`) → the free gap is `128–191`.
 
 ## Level 5 — Routing tables
 
-![Level 5](./level5.png)
+![Level 5](img/level5.png)
 
 **New concepts:** routing table (destination ⇒ next hop), `default` = `0.0.0.0/0`, longest prefix match, **the next hop must be inside your own network**, directly connected networks need no route.
 
@@ -169,7 +169,7 @@ Reserved by R2 (`0–127`) and R3 (`192–255`) → the free gap is `128–191`.
 
 ## Level 6 — The internet
 
-![Level 6](./level6.png)
+![Level 6](img/level6.png)
 
 **New concepts:** hop-by-hop routing (every stop needs a route, both ways), the router's own default route, the internet's route **back** to your network, public vs private addresses, summarization.
 
@@ -186,7 +186,7 @@ Reserved by R2 (`0–127`) and R3 (`192–255`) → the free gap is `128–191`.
 
 ## Level 7 — Router chains and subnetting
 
-![Level 7](./level7.png)
+![Level 7](img/level7.png)
 
 **New concepts:** transit network between routers (`/30` is ideal), **no overlap and no duplicate IPs across the whole map**, subnetting one range into several networks, routes on middle routers.
 
@@ -207,7 +207,7 @@ All masks `255.255.255.252` (`/30`):
 
 ## Level 8 — Reading clues in routes
 
-![Level 8](./level8.png)
+![Level 8](img/level8.png)
 
 **New concepts:** grey values **inside routing tables** are clues. A fixed next hop = the neighbor's interface address; a fixed destination = a forced block your networks must live in. Pack networks biggest-first on aligned boundaries.
 
@@ -237,7 +237,7 @@ All masks `255.255.255.252` (`/30`):
 
 ## Level 9 — Six goals, one map
 
-![Level 9](./level9.png)
+![Level 9](img/level9.png)
 
 **New concepts:** goal matrix (which stops each goal passes), only hosts that talk to the internet need public addresses, **stub router** (one exit → `default` is enough) vs **core router** (`default` up, specific routes down), destinations written as host addresses instead of network addresses.
 
@@ -268,7 +268,7 @@ All masks `255.255.255.252` (`/30`):
 
 ## Level 10 — The complete galaxy
 
-![Level 10](./level10.png)
+![Level 10](img/level10.png)
 
 **New concepts:** cross-checking clues (each fixed value confirms another), and **a single internet line**: the smallest summary holding the fixed networks becomes the ceiling for the whole map.
 
@@ -307,10 +307,10 @@ LAN1 (`0–127`) and LAN4 (`128–191`) are fixed → one internet line must be 
 .
 ├── README.md        ← this guide (English)
 ├── README.ar.md     ← Arabic version
-
-├── level1.png
-├── …
-└── level10.png
+└── img/
+    ├── level1.png
+    ├── …
+    └── level10.png
 ```
 
 Add the configuration files exported with **Get my config** to the repository as your project's rules require.
