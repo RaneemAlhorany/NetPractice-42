@@ -2,6 +2,10 @@
 
 **English** · [العربية](README.ar.md)
 
+### 📖 [Read the interactive book →](https://raneemalhorany.github.io/NetPractice-42/en.html)
+
+The full guide with a space theme, 8 interactive tools (address analyzer, block ruler, routing simulator, full-map simulator…), in [English](https://raneemalhorany.github.io/NetPractice-42/en.html) and [Arabic](https://raneemalhorany.github.io/NetPractice-42/).
+
 A level-by-level guide to the **NetPractice** project at 42: the theory each level tests, the solution for one real configuration, the traps, and a method that works for **any** numbers the game gives you.
 
 > ⚠️ NetPractice generates new numbers on every attempt. The solutions below are for one specific configuration (shown in each screenshot). Learn the **method**, not the answers.
@@ -307,6 +311,8 @@ LAN1 (`0–127`) and LAN4 (`128–191`) are fixed → one internet line must be 
 .
 ├── README.md        ← this guide (English)
 ├── README.ar.md     ← Arabic version
+├── index.html       ← interactive book (Arabic)
+├── en.html          ← interactive book (English)
 └── img/
     ├── level1.png
     ├── …
